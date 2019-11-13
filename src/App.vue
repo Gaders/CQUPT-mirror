@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+        <div class="header">
+            <h1>重庆邮电大学开源镜像</h1>
+        </div>
+        <mirrorListCard></mirrorListCard>
+        <proxyCard></proxyCard>
+        <AboutUs></AboutUs>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    import mirrorListCard from './components/mirrorListCard.vue';
+    import proxyCard from './components/proxyCard.vue';
+    import AboutUs from './components/AboutUs.vue';
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+
+    export default {
+        name: 'app',
+        components: {
+            mirrorListCard,
+            proxyCard,
+            AboutUs,
+        },
+    };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+    margin:  0 ;
+}
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+h1 {
+    display: inline;
+}
+h2 {
+    font-size: 35px;
 }
 </style>
